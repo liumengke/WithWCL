@@ -16,7 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self createUI];
+}
+
+- (void)createUI
+{
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(10, 100, self.view.frame.size.width-20, 44)];
+    label.text = @"协同开发";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont systemFontOfSize:18];
+    
+    
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning {
